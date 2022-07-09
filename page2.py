@@ -76,19 +76,10 @@ report_exp_lbl = Label(expense_display_frame, text = 'Total Expense: ')
 report_exp_lbl.grid(row=11, column = 0)
 
 
-
 #input frame
 expense_input_frame = Frame(tkWindow)
 expense_input_frame.place(rely=0.5)
 
-# def update_exp_type_option(*args):
-#     exp_category_selection = exp_dict[exp_category.get()]
-#     exp_type.set(exp_category_selection[0])
-    
-#     new_exp_type = exp_type_Entry_widget['exp_type']
-#     new_exp_type.delete(0, 'end')
-#     for el in exp_category_selection:
-#         new_exp_type.add_command(command=lambda type = el : exp_type.set(type))
 
 def update_exp_type_option(*args):
     exp_category_selection = exp_dict[exp_category.get()]
@@ -140,7 +131,7 @@ def add_current_date_btn_f():
     exp_date_Entry_widget.insert(0,date.today())
     return
     
-    
+
 add_current_date_btn = Button(expense_input_frame, text = 'Add Current Date',command= lambda: add_current_date_btn_f())
 add_current_date_btn.grid(row=3, column = 3)
 
